@@ -3,6 +3,7 @@
 - [Run](#run)
   - [Run each test](#run-each-test)
   - [Codegen tests](#codegen-tests)
+  - [Emulate device and timezone](#emulate-device-and-timezone)
 - [Debug test](#debug-test)
 - [Test examples](#test-examples)
 - [Credit](#credit)
@@ -26,6 +27,17 @@ $ npx playwright test tests/timeout-test.spec.js
 ```bash
 $ npx playwright codegen https://playwright.dev
 $ npx playwright codegen --ignore-https-errors https://playwright.dev
+```
+
+## Emulate device and timezone
+
+```bash
+# Emulate iPhone 11.
+$ npx playwright-cli --device="iPhone 11" open wikipedia.org
+
+# Emulate timezone, language & location
+# Once page opens, click the "my location" button to see geolocation in action
+$ npx playwright-cli --timezone="Europe/Rome" --geolocation="41.890221,12.492348" --lang="it-IT" open maps.google.com
 ```
 
 # Debug test
@@ -78,3 +90,4 @@ Running 1 test using 1 worker
 # Credit
 
 [Debugging Timeouts in Playwright Test v1.12.3](https://www.youtube.com/watch?v=JRuMGb3JE5k)
+[Test-Automation Playwright Tool Now Records and Replays Interaction Scripts, Captures Test Videos](https://www.infoq.com/news/2020/10/playwright-records-scripts-tests/)

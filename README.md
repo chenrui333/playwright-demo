@@ -3,6 +3,10 @@
 
 npx playwright test --timeout 3000
 
+## Debug run
+
+PWDEBUG=1 npx playwrite test
+
 # Debug timeout issue
 
 ```

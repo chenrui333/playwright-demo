@@ -40,3 +40,8 @@ Running 1 test using 1 worker
   1 failed
     test.spec.js:3:1 › should work =================================================================
 ```
+
+
+# Credit
+
+[Debugging Timeouts in Playwright Test v1.12.3](https://www.youtube.com/watch?v=JRuMGb3JE5k)

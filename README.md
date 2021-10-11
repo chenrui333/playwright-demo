@@ -1,13 +1,26 @@
+# playwright-demo <!-- omit in toc -->
+
+- [Run](#run)
+- [Debug test](#debug-test)
+- [Test examples](#test-examples)
+- [Credit](#credit)
 
 # Run
 
-npx playwright test --timeout 3000
+```bash
+$ npm install
+$ npx playwright test --timeout 3000
+```
 
-## Debug run
+# Debug test
 
-PWDEBUG=1 npx playwrite test
+With specifying `PWDEBUG=1`, it would pop up the debugging window so that we can put breakpoint for testing.
 
-# Debug timeout issue
+```bash
+$ PWDEBUG=1 npx playwrite test
+```
+
+# Test examples
 
 ```
 $ npx playwright test --timeout 3000

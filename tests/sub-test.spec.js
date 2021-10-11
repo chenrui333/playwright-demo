@@ -11,5 +11,10 @@ test('test', async ({ page }) => {
 
   // Go to https://httpbin.org/ip
   await page.goto('https://httpbin.org/ip');
+
+  // assert the HTML body
+  const content = await page.content();
+  expect(content).toContain('"origin": "1.1.1.1"');
+
   await page.screenshot({path: 'tests/screenshots/ip.png'});
 });

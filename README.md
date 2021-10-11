@@ -48,6 +48,21 @@ With specifying `PWDEBUG=1`, it would pop up the debugging window so that we can
 $ PWDEBUG=1 npx playwrite test tests/timeout-test.spec.js
 ```
 
+Another way to do the debug
+
+In the test, record the trace and then replay to debug.
+```bash
+test.use({
+  headless: true,
+  video: 'retain-on-failure',
+  trace: 'retain-on-failure'
+});
+```
+
+```bash
+$ npx playwright show-trace test-results/tests-timeout-test-should-work/trace.zip
+```
+
 # Test examples
 
 ```

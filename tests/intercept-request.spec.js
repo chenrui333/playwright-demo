@@ -1,5 +1,9 @@
 const {test, expect} = require('@playwright/test');
 
+test.use({
+  ignoreHTTPSErrors: true
+});
+
 test('stub test', async({page}) => {
   // Log and continue all network requests
   await page.route('**', route => {
@@ -7,6 +11,5 @@ test('stub test', async({page}) => {
     route.continue();
   });
 
-  // Go to https://playwright.dev/
-  await page.goto('https://playwright.dev/');
+  await page.goto('https://httpbin.org/');
 });

@@ -2,6 +2,7 @@
 
 - [Run](#run)
   - [Run each test](#run-each-test)
+  - [Codegen tests](#codegen-tests)
 - [Debug test](#debug-test)
 - [Test examples](#test-examples)
 - [Credit](#credit)
@@ -18,6 +19,13 @@ $ npx playwright test tests/timeout-test.spec.js --timeout 3000
 ```bash
 $ npx playwright test tests/intercept-request.spec.js
 $ npx playwright test tests/timeout-test.spec.js
+```
+
+## Codegen tests
+
+```bash
+$ npx playwright codegen https://playwright.dev
+$ npx playwright codegen --ignore-https-errors https://playwright.dev
 ```
 
 # Debug test

@@ -1,6 +1,7 @@
 # playwright-demo <!-- omit in toc -->
 
 - [Run](#run)
+  - [Run each test](#run-each-test)
 - [Debug test](#debug-test)
 - [Test examples](#test-examples)
 - [Credit](#credit)
@@ -9,7 +10,14 @@
 
 ```bash
 $ npm install
-$ npx playwright test --timeout 3000
+$ npx playwright test tests/timeout-test.spec.js --timeout 3000
+```
+
+## Run each test
+
+```bash
+$ npx playwright test tests/intercept-request.spec.js
+$ npx playwright test tests/timeout-test.spec.js
 ```
 
 # Debug test
@@ -17,7 +25,7 @@ $ npx playwright test --timeout 3000
 With specifying `PWDEBUG=1`, it would pop up the debugging window so that we can put breakpoint for testing.
 
 ```bash
-$ PWDEBUG=1 npx playwrite test
+$ PWDEBUG=1 npx playwrite test tests/timeout-test.spec.js
 ```
 
 # Test examples

@@ -1,5 +1,7 @@
 # playwright-demo <!-- omit in toc -->
 
+[![main](https://github.com/chenrui333/playwright-demo/actions/workflows/main.yml/badge.svg)](https://github.com/chenrui333/playwright-demo/actions/workflows/main.yml)
+
 - [Run](#run)
   - [Run each test](#run-each-test)
   - [Codegen tests](#codegen-tests)

@@ -11,7 +11,7 @@ test('should work', async({page}) => {
   await page.fill('[placeholder="Search"]', 'evaluate');
 
   // Click text=Evaluation Argument
-  await page.click('text=Evaluation Arguments');
+  await page.click('text=Evaluation Argument');
   expect(page.url()).toBe('https://playwright.dev/docs/core-concepts#evaluation-argument');
 
   // Click text=Command line tools

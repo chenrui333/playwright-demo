@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "check:test:e2e": "npx playwright test tests"
+  },
   "devDependencies": {
     "@playwright/test": "^1.15"
   }

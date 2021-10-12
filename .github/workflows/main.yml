@@ -11,9 +11,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm ci
-      # recommended CI config
-      # https://playwright.dev/docs/ci#ci-configurations
-      - run: npx playwright install-deps
+      - run: npx playwright install
       - name: Run E2E tests
         run:
           npm run check:test:e2e

@@ -10,10 +10,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup
-        run: |
-            npm ci
-            npx playwright install
+      - run: npm ci
+      # recommended CI config
+      # https://playwright.dev/docs/ci#ci-configurations
+      - run: npx playwright install-deps
       - name: Run E2E tests
         run:
           npm run check:test:e2e

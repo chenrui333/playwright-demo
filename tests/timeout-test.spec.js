@@ -10,17 +10,13 @@ test('should work', async({page}) => {
   // Go to https://playwright.dev/
   await page.goto('https://playwright.dev/');
 
-  // Click [placehoder="Search"]
-  await page.click('[placeholder="Search"]');
+  // Click text=Search⌘K
+  await page.locator('text=Search⌘K').click();
 
-  // Fill [placeholder="Search"]
-  await page.fill('[placeholder="Search"]', 'evaluate');
+  // Fill [placeholder="Search docs"]
+  await page.locator('[placeholder="Search docs"]').fill('command line tools');
 
-  // Click text=Evaluation Argument
-  await page.click('text=Evaluation Argument');
-  expect(page.url()).toBe('https://playwright.dev/docs/core-concepts#evaluation-argument');
-
-  // Click text=Command line tools
-  await page.click('text=Command Line Tool');
-  expect(page.url()).toBe('https://playwright.dev/docs/cli');
+  // Click div[role="button"]:has-text("CancelGuidesCommand line toolsUsage​Command line toolsInstall browsers​Command l")
+  await page.locator('div[role="button"]:has-text("CancelGuidesCommand line toolsUsage​Command line toolsInstall browsers​Command l")').click();
+  await expect(page).toHaveURL('https://playwright.dev/docs/cli#generate-code');
 });

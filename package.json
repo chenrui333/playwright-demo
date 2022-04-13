@@ -3,6 +3,7 @@
     "check:test:e2e": "npx playwright test tests"
   },
   "devDependencies": {
-    "@playwright/test": "^1.15"
+    "@playwright/test": "^1.21.0",
+    "typescript": "4.6.3"
   }
 }

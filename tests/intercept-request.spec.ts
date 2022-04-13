@@ -1,4 +1,4 @@
-const {test, expect} = require('@playwright/test');
+import {test} from '@playwright/test'
 
 test.use({
   ignoreHTTPSErrors: true

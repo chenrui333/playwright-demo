@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test');
+import {test, expect} from '@playwright/test'
+
 test('test', async ({ page }) => {
   // Go to https://httpbin.org/
   await page.goto('https://httpbin.org/');

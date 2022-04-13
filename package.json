@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "check:type": "tsc",
     "check:test:e2e": "npx playwright test tests"
   },
   "devDependencies": {
